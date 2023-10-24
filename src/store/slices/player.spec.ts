@@ -38,7 +38,7 @@ describe('player slice', () => {
   });
 
   it('should be able to play next video automatically', () => {
-    const newState = reducer(mocPlayerSlice, play({ lessonIndex: 1, moduleIndex: 0 }));
+    const newState = reducer(mocPlayerSlice, next());
 
     expect(newState.currentLessonIndex).toEqual(1);
     expect(newState.currentModuleIndex).toEqual(0);
