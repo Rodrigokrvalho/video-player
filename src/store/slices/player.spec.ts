@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { player as reducer, play, next } from './player';
+import { player as reducer, play, next, Course, PlayerState } from './player';
 
-const mocPlayerSlice = {
+const mocPlayerSlice: PlayerState = {
   course: {
+    id: 1,
     modules: [
       {
         id: '1',
@@ -24,6 +25,7 @@ const mocPlayerSlice = {
   },
   currentModuleIndex: 0,
   currentLessonIndex: 0,
+  isLoading: false
 };
 
 
